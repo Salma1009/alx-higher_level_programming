@@ -8,16 +8,13 @@ For multiples of five, print Buzz instead of the number.
 For multiples of three and five, print FizzBuzz instead of the number.
 """
 
-FIZZ = "Fizz"
-BUZZ = "Buzz"
-
 def fizzbuzz():
     for number in range(1, 101):
-        if (number % 3 and number % 5):
-            print("%s%s" % (FIZZ, BUZZ), end=' ')
-        elif (number % 3):
-            print("%s" % (FIZZ), end=' ')
-        elif (number % 5):
-            print("%s" % (BUZZ), end=' ')
+        if number % 3 == 0 and number % 5 == 0:
+            print("FizzBuzz ", end="")
+        elif number % 3 == 0:
+            print("Fizz ", end="")
+        elif number % 5 == 0:
+            print("Buzz ", end="")
         else:
-            print("%d" % (number), end=' ')
+            print("{} ".format(number), end="")
